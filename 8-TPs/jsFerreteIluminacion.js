@@ -23,19 +23,19 @@ function CalcularPrecio ()
  		total=precio-descuento;
  		document.getElementById('precioDescuento').value=total;
  	}
- 	else 
- 		if(cantidad=5)
- 		{if (marca='ArgentinaLuz')
+ 	else if(cantidad==5)
+ 		{
+ 			if (marca=='ArgentinaLuz')
  			{	
  			descuento=precio*0.4;
  		 	total=precio-descuento;
  			document.getElementById('precioDescuento').value=total;
- 			}else if(marca!='ArgentinaLuz')
+ 			}
+ 			else
  			{
- 			descuento=precio*0.30;
- 				total=precio-descuento;
- 				document.getElementById('precioDescuento').value=total;
+ 				descuento=precio*0.3;
+ 		 	total=precio-descuento;
+ 			document.getElementById('precioDescuento').value=total
+ 			}
  		}
- 	}
-
 }
