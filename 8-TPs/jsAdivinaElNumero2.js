@@ -11,18 +11,62 @@ Más de 10 intentos: “afortunado en el amor!!”.*/
 
 var numeroSecreto; 
 var contadorIntentos;
+var numero
 
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
 	 
-	
+		//alert(numeroSecreto );
 
+	numeroSecreto=Math.floor((Math.random()*100)+1);
+	contadorIntentos=0;
+	document.getElementById('intentos').value=contadorIntentos;
+	console.log(numeroSecreto);
 }
 
 function verificar()
 {
-	
-	
-
+	numero=document.getElementById('numero').value;
+	contadorIntentos=contadorIntentos+1;
+	document.getElementById('intentos').value=contadorIntentos;
+	if(numero==numeroSecreto)
+	{
+		if (contadorIntentos==1)
+		{
+			alert("Usted es un Psíquico!!!! sólo te costó: "+contadorIntentos+" VEZ!");
+		}
+		else if (contadorIntentos==2)
+		{
+			alert("excelente percepción!!! Sólo le costó: "+contadorIntentos+" VECES!");
+		}
+		else if (contadorIntentos==3)
+		{
+			alert("Esto es suerte!! Sólo le costó: "+contadorIntentos+" VECES!");
+		}
+		else if(contadorIntentos==4)
+		{
+			alert("excelente tecnica! Sólo le costó: "+contadorIntentos+" VECES!");
+		}
+		else if(contadorIntentos==5)
+		{
+			alert("usted está en la media! Sólo le costó: "+contadorIntentos+" VECES!");
+		}
+		else if(contadorIntentos>5&&contadorIntentos<10)
+		{
+			alert("falta técnica! le costó: "+contadorIntentos+" VECES!");
+		}
+		else
+		{
+			alert("Afortunado en el amor! le costó: "+contadorIntentos+" VECES! UN MONTONAZO!");
+		}
+	}
+	else if (numero>numeroSecreto)
+	{
+		alert("MMMH... NO, TIRA UN NUMERO MAS BAJO, CAPAZ VIENE POR AHI LA COSA");
+	}
+	else
+	{
+		alert("MMMH... NO, TIRA UN NUMERO MAS ALTO, CAPAZ VIENE POR AHI LA COSA");
+	}
 }

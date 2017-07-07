@@ -9,18 +9,42 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 */
 var numeroSecreto; 
 var contadorIntentos;
+var numero
 
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
-	
 
+	numeroSecreto=Math.floor((Math.random()*100)+1);
+	contadorIntentos=0;
+	document.getElementById('intentos').value=contadorIntentos;
+	console.log(numeroSecreto);
 }
 
 function verificar()
 {
-	
-	
+	numero=document.getElementById('numero').value;
+	contadorIntentos=contadorIntentos+1;
+	document.getElementById('intentos').value=contadorIntentos;
+	if(numero==numeroSecreto)
+	{
+		if (contadorIntentos==1)
+		{
+			alert("GENIO, CAPOO, IDOLOOOO, GANASTE! SOLO TE COSTO "+contadorIntentos+" VEZ!");
+		}
+		else
+		{
+			alert("GENIO, CAPOO, IDOLOOOO, GANASTE! SOLO TE COSTO "+contadorIntentos+" VECES!");
+		}
+	}
+	else if (numero>numeroSecreto)
+	{
+		alert("MMMH... NO, TIRA UN NUMERO MAS BAJO, CAPAZ VIENE POR AHI LA COSA");
+	}
+	else
+	{
+		alert("MMMH... NO, TIRA UN NUMERO MAS ALTO, CAPAZ VIENE POR AHI LA COSA");
+	}
 }
