@@ -10,91 +10,36 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var cantidad=document.getElementById('Cantidad').value;
- 	var marca=document.getElementById('Marca').value;
- 	var precio=35*cantidad;
+ 	
+ 	var costo;
+ 	var cantidad;
+ 	var marca;
  	var descuento;
  	var total;
+ 	var descuento;
 
- 	cantidad=parseInt(cantidad);
- 	if(cantidad>=6)
+
+ 	costo=35;
+ 	marca=document.getElementById('Marca').value;
+ 	cantidad=document.getElementById('Cantidad').value;
+ 	alert(cantidad);
+ 	total=cantidad*costo;
+
+
+ 	if (cantidad>=6)
  	{
- 		descuento=precio*0.25;
- 		total=precio-descuento;
+ 		descuento=0.5;
  	}
- 		else if(cantidad==5)
+ 	else
+ 		if (cantidad==4)
  		{
- 			if (marca=='ArgentinaLuz')
- 			{	
- 			descuento=precio*0.4;
- 		 	total=precio-descuento;
- 			}
- 			else
- 			{
- 				descuento=precio*0.3;
- 		 	total=precio-descuento;
- 			}
+ 			
  		}
- 		else if(cantidad==4)
- 	{
- 		if (marca==='ArgentinaLuz'||marca==='FelipeLamparas')
- 			{	
- 			descuento=precio*0.25;
- 		 	total=precio-descuento;
- 			}
- 			else
- 			{
- 				descuento=precio*0.2;
- 		 	total=precio-descuento;
- 			}
- 	}
- 		else if(cantidad==3)
- 	{
- 		if (marca==='ArgentinaLuz')
- 			{	
- 				descuento=precio*0.15;
- 		 		total=precio-descuento;
- 			}
- 			else if(marca==='FelipeLamparas')
- 			{
- 				descuento=precio*0.1;
- 		 		total=precio-descuento;
- 			}
- 			else
- 			{
- 				descuento=precio*0.05;
- 		 		total=precio-descuento;
- 			}
- 	}
- 		else if(cantidad==2)
- 	{
- 		if (marca==='ArgentinaLuz')
- 			{	
- 			descuento=precio*0.4;
- 		 	total=precio-descuento;
- 			}
- 			else
- 			{
- 				descuento=precio*0.3;
- 		 	total=precio-descuento;
- 			}
- 	}
- 		else
- 	{
- 		if (marca==='ArgentinaLuz')
- 			{	
- 			descuento=precio*0.4;
- 		 	total=precio-descuento;
- 			}
- 			else
- 			{
- 				descuento=precio*0.3;
- 		 	total=precio-descuento;
- 			}
- 	}
- 	if (total<120)
- 	{
- 		descuento=total*0.1+total
- 	}
- 	document.getElementById('precioDescuento').value=total;
+
+
+
+
+
+
+ 	descuento=total*descuento;
 }
