@@ -30,6 +30,10 @@ function verificar()
 	numero=document.getElementById('numero').value;
 	contadorIntentos=contadorIntentos+1;
 	document.getElementById('intentos').value=contadorIntentos;
+	
+
+
+	/*
 	if(numero==numeroSecreto)
 	{
 		if (contadorIntentos==1)
@@ -68,5 +72,46 @@ function verificar()
 	else
 	{
 		alert("MMMH... NO, TIRA UN NUMERO MAS ALTO, CAPAZ VIENE POR AHI LA COSA");
+	}*/
+
+
+		if (numero>numeroSecreto)
+	{
+		alert("MMMH... NO, TIRA UN NUMERO MAS BAJO, CAPAZ VIENE POR AHI LA COSA");
 	}
+	else if(numero<numeroSecreto)
+	{
+		alert("MMMH... NO, TIRA UN NUMERO MAS ALTO, CAPAZ VIENE POR AHI LA COSA");
+	} 
+	else{
+
+			switch(contadorIntentos){
+
+			case 1:
+				alert("Usted es un Psíquico!!!! sólo te costó: "+contadorIntentos+" VEZ!");
+			break;
+
+			case 2:
+				alert("excelente percepción!!! Sólo le costó: "+contadorIntentos+" VECES!");
+			break;
+
+			case 3:
+				alert("Esto es suerte!! Sólo le costó: "+contadorIntentos+" VECES!");
+			break;
+
+			case 4:
+				alert("excelente tecnica! Sólo le costó: "+contadorIntentos+" VECES!");
+			break;
+
+			case 5:
+			case 7:
+			case 8:
+			case 9:
+				alert("falta técnica! le costó: "+contadorIntentos+" VECES!");
+			break;
+			default:
+				alert("Afortunado en el amor! le costó: "+contadorIntentos+" VECES! UN MONTONAZO!");
+		}
+	}
+
 }

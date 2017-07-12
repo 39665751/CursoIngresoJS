@@ -28,21 +28,20 @@ function comenzar()
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	alert("la maquina selecciono: "+eleccionMaquina);
 	eleccionHumano="piedra";
 	if(eleccionHumano==eleccionMaquina)
 	{
-		alert("empate.");	
+		alert("la maquina selecciono: "+eleccionMaquina+" empate.");	
 		ContadorDeEmpates++;	
 	}
 	else if(eleccionMaquina=="tijera")
 	{
-		alert("vos ganastes.");
+		alert("la maquina selecciono: "+eleccionMaquina+"  vos ganastes.");
 		ContadorDeGanadas++;
 	}
 	else
 	{
-		alert("ganó la Maquina.");
+		alert("la maquina selecciono: "+eleccionMaquina+" ganó la Maquina.");
 		ContadorDePerdidas++;
 	}
 
@@ -51,43 +50,41 @@ mostarResultado();
 }//FIN DE LA FUNCIÓN
 function papel()
 {
-	alert("la maquina selecciono: "+eleccionMaquina);
 	eleccionHumano="papel";
 	if(eleccionHumano==eleccionMaquina)
 	{
-		alert("empate.");
+		alert("la maquina selecciono: "+eleccionMaquina+" empate.");
 		ContadorDeEmpates++;		
 
 	}
 	else if(eleccionMaquina=="piedra")
 	{
-		alert("vos ganastes.");
+		alert("la maquina selecciono: "+eleccionMaquina+" vos ganastes.");
 		ContadorDeGanadas++;
 	}
 	else
 	{
-		alert("ganó la Maquina.");
+		alert("la maquina selecciono: "+eleccionMaquina+" ganó la Maquina.");
 		ContadorDePerdidas++;
 	}
 mostarResultado();
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	alert("la maquina selecciono: "+eleccionMaquina);
 	eleccionHumano="tijera";
 	if(eleccionHumano==eleccionMaquina)
 	{
-		alert("empate.");
+		alert("la maquina selecciono: "+eleccionMaquina+" empate.");
 		ContadorDeEmpates++;		
 	}
 	else if(eleccionMaquina=="papel")
 	{
-		alert("vos ganastes.");
+		alert("la maquina selecciono: "+eleccionMaquina+" vos ganastes.");
 		ContadorDeGanadas++;
 	}
 	else
 	{
-		alert("ganó la Maquina.");
+		alert("la maquina selecciono: "+eleccionMaquina+" ganó la Maquina.");
 		ContadorDePerdidas++;
 	}
 mostarResultado();
